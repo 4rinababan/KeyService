@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetImeiKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImeiKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImeiKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMacKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeybox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttestationKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttestationKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttestationKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveImeiKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveImeiKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReserveImeiKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveMacKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveMacKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReserveMacKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveKeybox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveKeyboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReserveKeyboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveAttestationKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReserveAttestationKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReserveAttestationKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImeiKeyByWoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImeiKeyByWoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImeiKeyByWoIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacKeyByWoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacKeyByWoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMacKeyByWoIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyBoxKeyByWoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyBoxKeyByWoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyBoxKeyByWoIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttestationKeyByWoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requiredQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttestationKeyByWoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttestationKeyByWoIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetImeiKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetImeiKey" />
+  </wsdl:message>
+  <wsdl:message name="GetImeiKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetImeiKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMacKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMacKey" />
+  </wsdl:message>
+  <wsdl:message name="GetMacKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMacKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyboxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeybox" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyboxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttestationKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttestationKey" />
+  </wsdl:message>
+  <wsdl:message name="GetAttestationKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttestationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReserveImeiKeySoapIn">
+    <wsdl:part name="parameters" element="tns:ReserveImeiKey" />
+  </wsdl:message>
+  <wsdl:message name="ReserveImeiKeySoapOut">
+    <wsdl:part name="parameters" element="tns:ReserveImeiKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReserveMacKeySoapIn">
+    <wsdl:part name="parameters" element="tns:ReserveMacKey" />
+  </wsdl:message>
+  <wsdl:message name="ReserveMacKeySoapOut">
+    <wsdl:part name="parameters" element="tns:ReserveMacKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReserveKeyboxSoapIn">
+    <wsdl:part name="parameters" element="tns:ReserveKeybox" />
+  </wsdl:message>
+  <wsdl:message name="ReserveKeyboxSoapOut">
+    <wsdl:part name="parameters" element="tns:ReserveKeyboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReserveAttestationKeySoapIn">
+    <wsdl:part name="parameters" element="tns:ReserveAttestationKey" />
+  </wsdl:message>
+  <wsdl:message name="ReserveAttestationKeySoapOut">
+    <wsdl:part name="parameters" element="tns:ReserveAttestationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImeiKeyByWoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImeiKeyByWoID" />
+  </wsdl:message>
+  <wsdl:message name="GetImeiKeyByWoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImeiKeyByWoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMacKeyByWoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMacKeyByWoID" />
+  </wsdl:message>
+  <wsdl:message name="GetMacKeyByWoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMacKeyByWoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyBoxKeyByWoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeyBoxKeyByWoID" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyBoxKeyByWoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyBoxKeyByWoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttestationKeyByWoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttestationKeyByWoID" />
+  </wsdl:message>
+  <wsdl:message name="GetAttestationKeyByWoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttestationKeyByWoIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="KeyServicesSoap">
+    <wsdl:operation name="GetImeiKey">
+      <wsdl:input message="tns:GetImeiKeySoapIn" />
+      <wsdl:output message="tns:GetImeiKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKey">
+      <wsdl:input message="tns:GetMacKeySoapIn" />
+      <wsdl:output message="tns:GetMacKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeybox">
+      <wsdl:input message="tns:GetKeyboxSoapIn" />
+      <wsdl:output message="tns:GetKeyboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKey">
+      <wsdl:input message="tns:GetAttestationKeySoapIn" />
+      <wsdl:output message="tns:GetAttestationKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveImeiKey">
+      <wsdl:input message="tns:ReserveImeiKeySoapIn" />
+      <wsdl:output message="tns:ReserveImeiKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveMacKey">
+      <wsdl:input message="tns:ReserveMacKeySoapIn" />
+      <wsdl:output message="tns:ReserveMacKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveKeybox">
+      <wsdl:input message="tns:ReserveKeyboxSoapIn" />
+      <wsdl:output message="tns:ReserveKeyboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveAttestationKey">
+      <wsdl:input message="tns:ReserveAttestationKeySoapIn" />
+      <wsdl:output message="tns:ReserveAttestationKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImeiKeyByWoID">
+      <wsdl:input message="tns:GetImeiKeyByWoIDSoapIn" />
+      <wsdl:output message="tns:GetImeiKeyByWoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKeyByWoID">
+      <wsdl:input message="tns:GetMacKeyByWoIDSoapIn" />
+      <wsdl:output message="tns:GetMacKeyByWoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyBoxKeyByWoID">
+      <wsdl:input message="tns:GetKeyBoxKeyByWoIDSoapIn" />
+      <wsdl:output message="tns:GetKeyBoxKeyByWoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKeyByWoID">
+      <wsdl:input message="tns:GetAttestationKeyByWoIDSoapIn" />
+      <wsdl:output message="tns:GetAttestationKeyByWoIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KeyServicesSoap" type="tns:KeyServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetImeiKey">
+      <soap:operation soapAction="http://tempuri.org/GetImeiKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKey">
+      <soap:operation soapAction="http://tempuri.org/GetMacKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeybox">
+      <soap:operation soapAction="http://tempuri.org/GetKeybox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKey">
+      <soap:operation soapAction="http://tempuri.org/GetAttestationKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveImeiKey">
+      <soap:operation soapAction="http://tempuri.org/ReserveImeiKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveMacKey">
+      <soap:operation soapAction="http://tempuri.org/ReserveMacKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveKeybox">
+      <soap:operation soapAction="http://tempuri.org/ReserveKeybox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveAttestationKey">
+      <soap:operation soapAction="http://tempuri.org/ReserveAttestationKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImeiKeyByWoID">
+      <soap:operation soapAction="http://tempuri.org/GetImeiKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKeyByWoID">
+      <soap:operation soapAction="http://tempuri.org/GetMacKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyBoxKeyByWoID">
+      <soap:operation soapAction="http://tempuri.org/GetKeyBoxKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKeyByWoID">
+      <soap:operation soapAction="http://tempuri.org/GetAttestationKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KeyServicesSoap12" type="tns:KeyServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetImeiKey">
+      <soap12:operation soapAction="http://tempuri.org/GetImeiKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKey">
+      <soap12:operation soapAction="http://tempuri.org/GetMacKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeybox">
+      <soap12:operation soapAction="http://tempuri.org/GetKeybox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKey">
+      <soap12:operation soapAction="http://tempuri.org/GetAttestationKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveImeiKey">
+      <soap12:operation soapAction="http://tempuri.org/ReserveImeiKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveMacKey">
+      <soap12:operation soapAction="http://tempuri.org/ReserveMacKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveKeybox">
+      <soap12:operation soapAction="http://tempuri.org/ReserveKeybox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveAttestationKey">
+      <soap12:operation soapAction="http://tempuri.org/ReserveAttestationKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImeiKeyByWoID">
+      <soap12:operation soapAction="http://tempuri.org/GetImeiKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacKeyByWoID">
+      <soap12:operation soapAction="http://tempuri.org/GetMacKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyBoxKeyByWoID">
+      <soap12:operation soapAction="http://tempuri.org/GetKeyBoxKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttestationKeyByWoID">
+      <soap12:operation soapAction="http://tempuri.org/GetAttestationKeyByWoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KeyServices">
+    <wsdl:port name="KeyServicesSoap" binding="tns:KeyServicesSoap">
+      <soap:address location="http://localhost:57051/KeyServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KeyServicesSoap12" binding="tns:KeyServicesSoap12">
+      <soap12:address location="http://localhost:57051/KeyServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
