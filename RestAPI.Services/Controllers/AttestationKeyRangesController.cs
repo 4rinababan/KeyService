@@ -40,10 +40,10 @@ namespace RestAPI.Services.Controllers
                     _key.id = Convert.ToInt32(reader[0]);
                     _key.root_path = reader[1].ToString();
                     _key.preffix = reader[2].ToString();
-                    _key.attestationkey_start = Convert.ToInt32(reader[3]);
-                    _key.attestationkey_end = Convert.ToInt32(reader[4]);
+                    _key.attestationkey_start = reader[3].ToString();
+                    _key.attestationkey_end = reader[4].ToString();
                     _key.file_extension = reader[5].ToString();
-                    _key.file_qty_per_directory = reader[6].ToString();
+                    _key.file_qty_per_directory = Convert.ToInt32(reader[6]);
                     _key.qty = Convert.ToInt32(reader[7]);
                     _key.created_by = reader[8].ToString();
                     _key.created_on = reader[9].ToString();
@@ -92,10 +92,10 @@ namespace RestAPI.Services.Controllers
                         _key.id = Convert.ToInt32(reader[0]);
                         _key.root_path = reader[1].ToString();
                         _key.preffix = reader[2].ToString();
-                        _key.attestationkey_start = Convert.ToInt32(reader[3]);
-                        _key.attestationkey_end = Convert.ToInt32(reader[4]);
+                        _key.attestationkey_start = reader[3].ToString();
+                        _key.attestationkey_end = reader[4].ToString();
                         _key.file_extension = reader[5].ToString();
-                        _key.file_qty_per_directory = reader[6].ToString();
+                        _key.file_qty_per_directory = Convert.ToInt32(reader[6]);
                         _key.qty = Convert.ToInt32(reader[7]);
                         _key.created_by = reader[8].ToString();
                         _key.created_on = reader[9].ToString();
@@ -218,6 +218,8 @@ namespace RestAPI.Services.Controllers
             attestationKeyRangesMessage response = new attestationKeyRangesMessage();
             SqlConnection con = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand("sp_AttestationKeyRanges", con);
+            if (param.attestationkey_start.Length != 12 | param.attestationkey_end.Length != 12)
+            { response.success = false; response.message = "Access Denied : Length Not Valid !"; return response; }
             try
             {
                 if (con.State != ConnectionState.Open) { con.Close(); }

@@ -41,22 +41,22 @@ namespace RestAPI.Services.Models
         public string badge { get; set; }
         public string part_no { get; set; }
         public string remarks { get; set; }
-
-    }
-
-    public class MR_Parameter2
-    {
-        public string mac_start { get; set; }
-        public string mac_end { get; set; }
-        public int qty { get; set; }
-        public string badge { get; set; }
-        public string part_no { get; set; }
-        public string remarks { get; set; }
         public int Id { get; set; }
     }
 
-    public class MR_Parameter3
-    {
-        public int Id { get; set; }
-    }
+    //public class MR_Parameter2
+    //{
+    //    public string mac_start { get; set; }
+    //    public string mac_end { get; set; }
+    //    public int qty { get; set; }
+    //    public string badge { get; set; }
+    //    public string part_no { get; set; }
+    //    public string remarks { get; set; }
+    //    public int Id { get; set; }
+    //}
+
+    //public class MR_Parameter3
+    //{
+    //    public int Id { get; set; }
+    //}
 }

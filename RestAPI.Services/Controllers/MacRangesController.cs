@@ -116,7 +116,7 @@ namespace RestAPI.Services.Controllers
 
         [HttpGet]
         [ActionName("getById")]
-        public macRangesResponse GetById([FromBody]MR_Parameter2 param)
+        public macRangesResponse GetById([FromBody]MR_Parameter param)
         {
             macRangesResponse response = new macRangesResponse();
             SqlConnection con = new SqlConnection(connection);
@@ -172,7 +172,7 @@ namespace RestAPI.Services.Controllers
 
         [HttpPut]
         [ActionName("update")]
-        public macRangesMessage UpdateMacRanges([FromBody]MR_Parameter2 param)
+        public macRangesMessage UpdateMacRanges([FromBody]MR_Parameter param)
         {
             GetById(param);
             macRangesMessage response = new macRangesMessage();
@@ -223,7 +223,7 @@ namespace RestAPI.Services.Controllers
 
         [HttpDelete]
         [ActionName("delete")]
-        public macRangesMessage DeleteMacRanges([FromBody]MR_Parameter2 param)
+        public macRangesMessage DeleteMacRanges([FromBody]MR_Parameter param)
         {
             GetById(param);
             macRangesMessage response = new macRangesMessage();

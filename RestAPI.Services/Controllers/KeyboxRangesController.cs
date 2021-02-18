@@ -219,6 +219,8 @@ namespace RestAPI.Services.Controllers
             keyboxRangesMessage response = new keyboxRangesMessage();
             SqlConnection con = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand("sp_KeyboxRanges", con);
+            if (param.keybox_start.Length != 12 | param.keybox_end.Length != 12)
+            {response.success = false;response.message = "Access Denied : Length Not Valid !";return response;}
             try
             {               
                 if (con.State != ConnectionState.Open) { con.Close(); }

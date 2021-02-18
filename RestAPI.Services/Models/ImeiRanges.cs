@@ -45,13 +45,13 @@ namespace RestAPI.Services.Models
         public int Id { get; set; } 
     }
 
-    public class IR_Parameter2
-    {
-        public int Id { get; set; }
-    }
+    //public class IR_Parameter2
+    //{
+    //    public int Id { get; set; }
+    //}
 
-    public class IR_Parameter3
-    {
-        public int tacfac { get; set; }
-    }
+    //public class IR_Parameter3
+    //{
+    //    public int tacfac { get; set; }
+    //}
 }

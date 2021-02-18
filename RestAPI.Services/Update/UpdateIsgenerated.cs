@@ -61,6 +61,58 @@ namespace RestAPI.Services.Update
 
             return true;
         }
+
+        public bool UpdateKeybox(int Id)
+        {
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand("sp_GenerateKeys", con);
+            try
+            {
+                if (con.State != ConnectionState.Open) { con.Close(); }
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@action", SqlDbType.VarChar).Value = "UpdateKeybox";
+                cmd.Parameters.Add("@Id", SqlDbType.VarChar).Value = Id;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return true;
+        }
+
+        public bool UpdateAttestationKey(int Id)
+        {
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand("sp_GenerateKeys", con);
+            try
+            {
+                if (con.State != ConnectionState.Open) { con.Close(); }
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@action", SqlDbType.VarChar).Value = "UpdateAttestationKey";
+                cmd.Parameters.Add("@Id", SqlDbType.VarChar).Value = Id;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return true;
+        }
     }
 
     

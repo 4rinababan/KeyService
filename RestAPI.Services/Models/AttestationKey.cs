@@ -10,10 +10,10 @@ namespace RestAPI.Services.Models
         public int id { get; set; }
         public string root_path { get; set; }
         public string preffix { get; set; }
-        public int attestationkey_start { get; set; }
-        public int attestationkey_end { get; set; }
+        public string attestationkey_start { get; set; }
+        public string attestationkey_end { get; set; }
         public string file_extension { get; set; }
-        public string file_qty_per_directory { get; set; }
+        public int file_qty_per_directory { get; set; }
         public int qty { get; set; }
         public string created_by { get; set; }
         public string created_on { get; set; }
@@ -41,8 +41,8 @@ namespace RestAPI.Services.Models
         public int id { get; set; }
         public string root_path { get; set; }
         public string preffix { get; set; }
-        public int attestationkey_start { get; set; }
-        public int attestationkey_end { get; set; }
+        public string attestationkey_start { get; set; }
+        public string attestationkey_end { get; set; }
         public string file_extension { get; set; }
         public int file_qty_per_directory { get; set; }
         public int qty { get; set; }

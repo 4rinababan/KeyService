@@ -79,4 +79,3 @@ D:\ARI\WebServices\API\RestAPI.Services\RestAPI.Services\obj\Debug\RestAPI.Servi
 D:\ARI\WebServices\API\RestAPI.Services\RestAPI.Services\obj\Debug\RestAPI.Services.csproj.CopyComplete
 D:\ARI\WebServices\API\RestAPI.Services\RestAPI.Services\obj\Debug\RestAPI.Services.dll
 D:\ARI\WebServices\API\RestAPI.Services\RestAPI.Services\obj\Debug\RestAPI.Services.pdb
-D:\ARI\WebServices\API\RestAPI.Services\RestAPI.Services\obj\Debug\RestAPI.Services.csprojAssemblyReference.cache
